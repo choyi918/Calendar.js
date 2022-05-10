@@ -1,0 +1,13 @@
+/* 저작자: 김수하 */
+/* ======utils style====================================== */
+.d-none {
+    display: none !important; 
+}
+
+.d-initial {
+    display: initial;
+}
+
+.d-block {
+    display: block;
+}
