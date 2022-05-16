@@ -212,6 +212,16 @@ export default class Calendar{
         this.#css =
         `
             /* 저작자 : 조영인 */
+            /* reset */
+            ol {
+                list-style: none;
+            }
+
+            /* utils */
+            .d-none {
+                display : none;
+            }
+
             /* === layout block ========================= */
             /* --- section(#young-in-calendar)-------------------------- */
             #young-in-calendar{
@@ -687,6 +697,7 @@ export default class Calendar{
         this.#selectedDates = [];
     }
 
+    // startDay와 endDay 사이에 있는 날짜들에 스타일을 입힘
     #indicateRangeOfDates(){
         const monthOfFirstSec = parseInt(this.#monthSections[0].querySelector("h1").innerText.split("월")[0]);
         const yearOfFirstSec = parseInt(this.#monthSections[0].querySelector("h1>span").innerText);
@@ -696,6 +707,7 @@ export default class Calendar{
         const yearOfSecondSec = parseInt(this.#monthSections[1].querySelector("h1>span").innerText);
         const spanListOfSecondSec = this.#monthSections[1].querySelectorAll(".month-table-body span");
 
+        // 첫번째 달력 섹션에 있는 날짜를 순회
         for (let i = 0; i < spanListOfFirstSec.length; i++) {
             if (!this.#checkDateOrNot(spanListOfFirstSec[i]))
                 continue;
@@ -727,6 +739,7 @@ export default class Calendar{
             this.#selectedDates.push(spanListOfFirstSec[i]);
         }
 
+        // 두번째 달력 섹션에 있는 날짜를 순회
         for (let i = 0; i < spanListOfSecondSec.length; i++) {
             if (!this.#checkDateOrNot(spanListOfSecondSec[i]))
                 continue;
@@ -759,6 +772,7 @@ export default class Calendar{
         }
     }
 
+    // startDay >= endDay 인지 아닌지를 확인
     #checkValidRangeOfDates(startDay, endDay){
         if (startDay == null || endDay == null)
             return false;
@@ -771,6 +785,7 @@ export default class Calendar{
         return (end - start) > 0 ? true : false;
     }
 
+    // 인자로 넘어온 날짜가 startDay와 endDay 사이에 존재하는지 확인
     #isIncludedRangeOfDates(date, month, year){
         if (this.#startDay == null || this.#endDay == null)
             return false;
@@ -785,6 +800,7 @@ export default class Calendar{
         return b1 && b2;
     }
 
+    // 인자로 들어온 엘리먼트가 date 인지 확인
     #checkDateOrNot(dateOrNot){
         const date = dateOrNot.innerText;
         
@@ -807,6 +823,7 @@ export default class Calendar{
         return stringYYYY + stringMM + stringDD;
     }
 
+    // 윤년, 윤달을 고려해서 날짜를 그릴 해당 월(달)들의 1일이 몇요일인지 계산하여 writeDate()에 넘겨준다.
     #engraveDatesOfMonth(){
         // var base = {"year": 2020, "month": 1, "date": 1, "day": 3}; // 윤년
         const base = {"year": 1976, "month": 1, "date": 1, "day": 4}; // 윤년
@@ -845,6 +862,7 @@ export default class Calendar{
         this.#indicatePastDate();
     }
 
+    // 페이지에 그려진 날짜들을 다 지움
     #clearDates(){
         const bodies = this.#calendarSection.querySelectorAll(".month-table-body");
 
@@ -856,6 +874,7 @@ export default class Calendar{
         }
     }
 
+    //인자로 첫번째 달의 시작 요일과, 두번째 달의 시작요일, 첫번째 달의 숫자, 해(년)의 숫자를 인자로 받고 날짜를 그림 
     #writeDates(firstStartDayNumber, secondStartDayNumber, firstMonth, firstYear){
         const firstSection = this.#calendarSection.querySelector(".month-first");
 
@@ -902,6 +921,7 @@ export default class Calendar{
         }
     }
 
+    // 당일 이전 날짜들을 시각적으로 흐리게 스타일을 입힘, 사용자에게 선택할 수 없는 날이라는 것을 인식하기 위함
     #indicatePastDate(){
         const firstSection = this.#calendarSection.querySelector(".month-first");
         const monthOfFirstSec = firstSection.querySelector("h1");
@@ -943,6 +963,7 @@ export default class Calendar{
 
     }
 
+    // 들어온 인자로 당일 이전 날짜인지 판단함
     #isPastDate(year, month, date){
         const yearOfToday = this.#today.getFullYear();
         const monthOfToday = this.#today.getMonth() + 1;
@@ -954,6 +975,7 @@ export default class Calendar{
         return todayStringYYYYMMDD - paramStringYYYYMMDD > 0 ? true : false;
     }
 
+    // 페이지에 날짜를 새로 그리기 위해 이전에 입혀 놓은 과거 날짜에 대한 스타일을 없앰
     #deletePastDateStyle() {
         const bodies = this.#calendarSection.querySelectorAll(".month-table-body");
         for (let i = 0; i < bodies.length; i++) {
