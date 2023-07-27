@@ -14,7 +14,7 @@
 
 ### 프로그램 동작 모습
 
-![날짜선택.gif](Simple%20Calendar%20js%20module%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%201dd20cc58b4e45da9fb4f2115ababb04/%E1%84%82%E1%85%A1%E1%86%AF%E1%84%8D%E1%85%A1%E1%84%89%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A2%E1%86%A8.gif)
+<img src="./readme_images/날짜선택.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
 
 ### 날짜선택1
 
@@ -26,19 +26,20 @@
 
 화면에는 나타나지 않았지만, 두번째로 선택한 날짜가 첫번째로 선택한 날짜보다 앞에 있다면, 메시지를 띄워 “잘못된 선택"이라는 것을 알리고, 다시 선택하도록 하였습니다.
 
-![날짜선택2.gif](Simple%20Calendar%20js%20module%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%201dd20cc58b4e45da9fb4f2115ababb04/%E1%84%82%E1%85%A1%E1%86%AF%E1%84%8D%E1%85%A1%E1%84%89%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A2%E1%86%A82.gif)
+<img src="./readme_images/날짜선택2.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
 
 ### 날짜선택2
 
 체크인, 체크아웃 날짜를 선택한 후에도 변경사항이 있을 때 그대로 엘리먼트를 누르면 달력이 다시 로드되고, 변경할 날짜들을 선택할 수 있도록 하였습니다.
 
-![달력이동.gif](Simple%20Calendar%20js%20module%20%E1%84%89%E1%85%A9%E1%84%80%E1%85%A2%201dd20cc58b4e45da9fb4f2115ababb04/%E1%84%83%E1%85%A1%E1%86%AF%E1%84%85%E1%85%A7%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%83%E1%85%A9%E1%86%BC.gif)
+
 
 ### 달력이동
 
 달력 상단 오른쪽에 위,아래 버튼을 통해 월 단위로 날짜이동을 할 수 있습니다. 
 
 추가로, 당일 기준으로 그 전날짜들은 선택할 수 없도록 하였으며, 화면에도 흐린글씨로 표현을 해 시각적으로 선택불가능한 날짜로 인식되도록 만들었습니다.
+<img src="./readme_images/달력이동.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
 
 ### 개발 중 문제 해결 과정
 
