@@ -14,8 +14,6 @@
 
 ### 프로그램 동작 모습
 
-<img src="./readme_images/날짜선택.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
-
 ### 날짜선택1
 
 체크인 혹은 체크아웃 엘리먼트 둘 중 하나를 클릭하면 달력이 화면 위로 나타납니다.
@@ -26,13 +24,17 @@
 
 화면에는 나타나지 않았지만, 두번째로 선택한 날짜가 첫번째로 선택한 날짜보다 앞에 있다면, 메시지를 띄워 “잘못된 선택"이라는 것을 알리고, 다시 선택하도록 하였습니다.
 
-<img src="./readme_images/날짜선택2.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
+<br>
+<img src="./readme_images/1.gif" width="30%" height="30%" title="" alt=""></img>
+<br>
 
 ### 날짜선택2
 
 체크인, 체크아웃 날짜를 선택한 후에도 변경사항이 있을 때 그대로 엘리먼트를 누르면 달력이 다시 로드되고, 변경할 날짜들을 선택할 수 있도록 하였습니다.
 
-
+<br>
+<img src="./readme_images/2.gif" width="30%" height="30%" title="" alt=""></img>
+<br>
 
 ### 달력이동
 
@@ -41,7 +43,7 @@
 추가로, 당일 기준으로 그 전날짜들은 선택할 수 없도록 하였으며, 화면에도 흐린글씨로 표현을 해 시각적으로 선택불가능한 날짜로 인식되도록 만들었습니다.
 
 <br>
-<img src="./readme_images/달력이동.gif" width="30%" height="30%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
+<img src="./readme_images/3.gif" width="30%" height="30%" title="" alt=""></img>
 <br>
 
 ### 개발 중 문제 해결 과정
