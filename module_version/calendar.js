@@ -827,7 +827,7 @@ export default class Calendar{
     #engraveDatesOfMonth(){
         // var base = {"year": 2020, "month": 1, "date": 1, "day": 3}; // 윤년
         const base = {"year": 1976, "month": 1, "date": 1, "day": 4}; // 윤년
-        const addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 이번달 요일번호(예:일요일 0번, 수요일 3번)에 각 월마다 정해진 인자를 더함
+        const addFactor = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]; // 다음달 첫날이 몇 요일인지 구하기위해 해당달 요일번호(예:일요일 0번, 수요일 3번)에 각 월마다 정해진 인자를 더함
 
         const firstSection = this.#calendarSection.querySelector(".month-first");
         const firstMonth = firstSection.querySelector("h1").innerText.split('월')[0];
@@ -840,7 +840,7 @@ export default class Calendar{
         const monthSize = Math.abs(firstYear - base.year) * 12 + parseInt(firstMonth);
         let dayNumber = base.day;
         for (let i = 0; i < monthSize; i++){
-            if (i % 12 == 1 && parseInt(i / 12) % 4 == 0) // 윤년일 2월일 때
+            if (i % 12 == 1 && parseInt(i / 12) % 4 == 0) // 윤년의 2월일 때
                 dayNumber = (dayNumber + addFactor[i % 12] + 1) % 7;
             else 
                 dayNumber = (dayNumber + addFactor[i % 12]) % 7;
