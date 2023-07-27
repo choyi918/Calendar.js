@@ -39,7 +39,10 @@
 달력 상단 오른쪽에 위,아래 버튼을 통해 월 단위로 날짜이동을 할 수 있습니다. 
 
 추가로, 당일 기준으로 그 전날짜들은 선택할 수 없도록 하였으며, 화면에도 흐린글씨로 표현을 해 시각적으로 선택불가능한 날짜로 인식되도록 만들었습니다.
-<img src="./readme_images/달력이동.gif" width="60%" height="60%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
+
+<br>
+<img src="./readme_images/달력이동.gif" width="30%" height="30%" title="kakao_login_sequence_diagram" alt="system-fuctions"></img>
+<br>
 
 ### 개발 중 문제 해결 과정
 
