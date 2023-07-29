@@ -6,8 +6,6 @@
 - “Seanery” 호텔 예약 서비스에서 사용 할 체크인 - 체크아웃 날짜 범위를 선택할 수 있는 달력을 제작하였습니다
 - 달력 디자인은 **<Newlecture Java 웹 프로그래밍 교육>**의 팀원인 ‘김수하'님이 전담하였습니다.
 
-[https://github.com/choyi918/CalendarJS.git](https://github.com/choyi918/CalendarJS.git)
-
 ### 사용 기술
 
 - HTML5, CSS3, Javacript ES6
